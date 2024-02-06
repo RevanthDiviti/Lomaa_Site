@@ -18,7 +18,6 @@ function Blog() {
     minHeight: '100vh', // Ensure the content takes at least the full height of the viewport
   };
 
-  // Media query for smaller screens
   const mediaQueryStyle = {
     '@media (max-width: 768px)': {
       containerStyle: {
