@@ -16,7 +16,7 @@ function Blog() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center', // Center horizontally
-    minHeight: '100vh', // Ensure the content takes at least the full height of the viewport
+    minHeight: '100vh',
   };
 
   // Media query for smaller screens
