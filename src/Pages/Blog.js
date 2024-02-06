@@ -18,7 +18,6 @@ function Blog() {
     minHeight: '100vh', // Ensure the content takes at least the full height of the viewport
   };
 
-  // Media query for smaller screens
   const mediaQueryStyle = {
     '@media (max-width: 768px)': {
       containerStyle: {
@@ -29,12 +28,11 @@ function Blog() {
     '@media (max-width: 375px)': {
       containerStyle: {
         ...containerStyle, 
-        display: 'block', // Change display to block for even smaller screens
+        display: 'block', 
       },
     },
   };
 
-  // Style to remove underline and set font color to black
   const linkStyle = {
     textDecoration: 'none',
     color: 'black',
