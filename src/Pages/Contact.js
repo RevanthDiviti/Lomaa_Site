@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className='container'>
       <div className='row' style={{backgroundColor:'gray'}}>
-        <h1 style={{display:"flex",justifyContent:'center'}} >Contact</h1>
+        <h1 style={{display:"flex",justifyContent:'center'}} >Contact page</h1>
       </div>
       <div className='row'>
         <div className='col-4' style={{display:'flex',justifyContent:'center'}}>
