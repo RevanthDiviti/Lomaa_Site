@@ -1,11 +1,59 @@
-import React from 'react'
+import React from 'react';
+import { Grid, Container, Typography, styled } from '@mui/material';
+import client1 from '../Assets/clients/allscripts.png';
+import client2 from '../Assets/clients/cgi.png';
+import client3 from '../Assets/clients/conduent.png';
+import client4 from '../Assets/clients/ddd.png';
+import client5 from '../Assets/clients/kisanbharath.png';
+import client6 from '../Assets/clients/seal.png';
+import client7 from '../Assets/clients/sealohio.png';
+import client8 from '../Assets/clients/seven.png';
+import client9 from '../Assets/clients/takeda.png';
+import client10 from '../Assets/clients/virtusa.png';
+import client11 from '../Assets/clients/voltari.png';
 
-const Client = () => {
+// Custom styled component for images with hover effect
+const HoverImage = styled('img')({
+  maxWidth: '100%',
+  height: 'auto',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.05)',
+    boxShadow: '0 0 20px #00ff00',
+  },
+});
+
+const ClientsPage = () => {
+  
+  const clients = [
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
+    client9,
+    client10,
+    client11,
+  ];
+
   return (
-    <div>
-      Client<h1>PAVANI</h1>
-    </div>
-  )
-}
+    <Container>
+      <Typography variant="h4" align="center" gutterBottom>
+        Our Clients
+      </Typography>
+      <Grid container spacing={3}>
+        {clients.map((client, index) => (
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+            {/* Apply HoverImage component for image with hover effect */}
+            <HoverImage src={client} alt={`Client ${index + 1}`} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
 
-export default Client
+export default ClientsPage;
