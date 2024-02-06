@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 function Blog() {
   const containerStyle = {
     display: 'flex',
-    flexDirection: 'row', // Display cards in a row
-    justifyContent: 'center', // Center horizontally
-    alignItems: 'center', // Center vertically
+    flexDirection: 'row', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
     gap: '16px',
   };
 
