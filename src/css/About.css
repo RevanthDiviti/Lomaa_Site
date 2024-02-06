@@ -1,0 +1,82 @@
+/* Common styles */
+.about-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 5rem;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.icon-item:hover {
+  background-color: white;
+}
+
+.icon-item:hover svg {
+  transform: scale(1.2);
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.centered-container p {
+  text-align: center;
+}
+
+.centered-container svg {
+  width: 150px;
+  height: 100px;
+}
+
+.footer-container {
+  width: calc(100% + 40px); /* Adjusted width to accommodate the 30px gap on each side */
+  margin: 0 30px; /* Added margin to create the gap */
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-left: -1.5rem;
+  height: 100px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons > * {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .icon-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .centered-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
