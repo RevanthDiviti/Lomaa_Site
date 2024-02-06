@@ -14,9 +14,10 @@ import client11 from '../Assets/clients/voltari.png';
 
 // Custom styled component for images with hover effect
 const HoverImage = styled('img')({
-  maxWidth: '100%',
+  maxWidth: '70%',
   height: 'auto',
   transition: 'transform 0.3s ease-in-out',
+  borderRadius: '10px', // Apply border radius
   '&:hover': {
     transform: 'scale(1.05)',
     boxShadow: '0 0 20px #00ff00',
@@ -41,13 +42,13 @@ const ClientsPage = () => {
 
   return (
     <Container>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4,fontWeight:'900',fontFamily:'fantasy' }}>
         Our Clients
-      </Typography>
+w      </Typography>
       <Grid container spacing={3}>
         {clients.map((client, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-            {/* Apply HoverImage component for image with hover effect */}
+            
             <HoverImage src={client} alt={`Client ${index + 1}`} />
           </Grid>
         ))}
