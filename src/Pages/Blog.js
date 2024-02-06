@@ -28,12 +28,11 @@ function Blog() {
     '@media (max-width: 375px)': {
       containerStyle: {
         ...containerStyle, 
-        display: 'block', // Change display to block for even smaller screens
+        display: 'block', 
       },
     },
   };
 
-  // Style to remove underline and set font color to black
   const linkStyle = {
     textDecoration: 'none',
     color: 'black',
