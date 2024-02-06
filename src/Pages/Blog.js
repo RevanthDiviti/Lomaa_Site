@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 function Blog() {
   const containerStyle = {
-    display: 'flex',
     flexDirection: 'row', // Display cards in a row
     justifyContent: 'center', // Center horizontally
     alignItems: 'center', // Center vertically
@@ -19,14 +18,21 @@ function Blog() {
     minHeight: '100vh', // Ensure the content takes at least the full height of the viewport
   };
 
-  // Media query for smaller screens
   const mediaQueryStyle = {
     '@media (max-width: 768px)': {
-      flexDirection: 'column', // Display cards in a column on smaller screens
+      containerStyle: {
+        ...containerStyle, // Maintain other styles
+        display: 'block', // Change display to block for mobile view
+      },
+    },
+    '@media (max-width: 375px)': {
+      containerStyle: {
+        ...containerStyle, 
+        display: 'block', 
+      },
     },
   };
 
-  // Style to remove underline and set font color to black
   const linkStyle = {
     textDecoration: 'none',
     color: 'black',
