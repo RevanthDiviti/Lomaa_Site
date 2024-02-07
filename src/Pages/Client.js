@@ -41,6 +41,11 @@ const ClientsPage = () => {
   ];
 
   return (
+    <>
+    <div className='about-content'>
+        <br></br><br></br>
+      
+      </div>
     <Container>
       <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4,fontWeight:'900',fontFamily:'inherit' }}>
         Our Clients
@@ -54,6 +59,7 @@ const ClientsPage = () => {
         ))}
       </Grid>
     </Container>
+    </>
   );
 };
 

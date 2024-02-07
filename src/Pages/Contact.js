@@ -35,7 +35,13 @@ const ClientsPage = () => {
   ];
 
   return (
+    <>
+    <div className='about-content'>
+        <br></br><br></br>
+      
+      </div>
     <Container>
+      
       <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000', fontFamily: 'Poppins' }}>
         Contact
       </Typography>
@@ -56,6 +62,7 @@ const ClientsPage = () => {
       {/* Add the image below the Grid */}
       <img src={TeleCaller} alt="Additional Image" style={{ maxWidth: '100%', marginTop: '100px' }} />
     </Container>
+    </>
   );
 };
 
