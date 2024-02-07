@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -18,6 +18,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import InfoIcon from '@mui/icons-material/Info';
 import logo from '../Assets/LOGO.png'
+import '../css/Header.css';
 
 const drawerWidth = 240;
 const navItems = [
@@ -31,7 +32,7 @@ const navItems = [
 
 function DrawerAppBar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -69,19 +70,12 @@ function DrawerAppBar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{color:'black'}}/>
           </IconButton>
-          {/* <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography> */}
           <img src={logo} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px', marginBottom: '16px' }} />
           <Box sx={{ display: { xs: 'none', sm: 'block' }, marginLeft:'auto',marginRight:'55px'}}>
             {navItems.map((item) => (
-              <Button key={item.label} component={Link} to={item.path} sx={{ color: '#000',margin:'15px' }}>
+              <Button key={item.label} component={Link} to={item.path} sx={{ color: '#000',margin:'15px' }} className="nav-item">
                 {item.label}
               </Button>
             ))}
