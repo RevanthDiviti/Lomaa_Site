@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  margin-top: -2.8rem;
 }
 
 .icon-container {
@@ -50,6 +51,8 @@
 .footer-container {
   width: calc(100% + 40px); /* Adjusted width to accommodate the 30px gap on each side */
   margin: 0 30px; /* Added margin to create the gap */
+  height: 50rem; /* Adjust height as needed */
+  background-color: #0c1446;
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
@@ -80,3 +83,15 @@
     gap: 2rem;
   }
 }
+.about-content {
+  width: 200px; /* Adjust width as needed */
+  height: 50rem; /* Adjust height as needed */
+  background-color: #0c1446; 
+  clip-path: polygon(-80% 0%, 180% 0%, 50% 100%);
+  width: calc(100% + 100px);
+  margin-left: -5rem;
+  color: white;
+  height: 10rem;
+  margin-top: -10px;
+}
+
