@@ -24,7 +24,6 @@ import client6 from '../Assets/maps-pin-line-icon.png';
 import TeleCaller from '../Assets/Contact_telecaller.jpeg';
 import TeleCaller2 from '../Assets/Small_Screen_Telecaller_Image.jpeg';
 
-// Define the Poppins font
 const theme = createTheme({
   typography: {
     fontFamily: 'Poppins, sans-serif',
@@ -230,11 +229,26 @@ const StartChatButton = styled('button')({
   },
 });
 
-const ContactFormContainer = styled('div')({
-  marginTop: '50px', // Adjust the margin as needed
+const ContactHeading = styled(Typography)({
+  width: '200px', 
+  height: '50rem', 
+  backgroundColor: '#a0ce4e',
+  clipPath: 'polygon(-80% 0%, 180% 0%, 50% 100%)',
+  width: 'calc(100% + 100px)',
+  marginLeft: '-5rem',
+  color: 'white',
+  height: '10rem',
+  marginTop: '-10px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center', 
 });
 
-// Contact component
+
+const ContactFormContainer = styled('div')({
+  marginTop: '50px',
+});
+
 const Contact = () => {
   const clients = [client1, client2, client3, client4, client5, client6];
   const clientNames = [
@@ -248,9 +262,9 @@ const Contact = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
+      <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
           Contact
-        </Typography>
+        </ContactHeading>
         <Grid container spacing={3}>
           {clients.map((client, index) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
