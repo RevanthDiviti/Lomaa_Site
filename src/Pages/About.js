@@ -27,11 +27,35 @@ const About = () => {
     config: { tension: 300, friction: 10 },
   }));
 
+  const [icon4Props, setIcon4Props] = useSpring(() => ({
+    transform: 'scale(1)',
+    config: { tension: 300, friction: 10 },
+  }));
+  const [icon5Props, setIcon5Props] = useSpring(() => ({
+    transform: 'scale(1)',
+    config: { tension: 300, friction: 10 },
+  }));
+  const [icon6Props, setIcon6Props] = useSpring(() => ({
+    transform: 'scale(1)',
+    config: { tension: 300, friction: 10 },
+  }));
+  const [icon7Props, setIcon7Props] = useSpring(() => ({
+    transform: 'scale(1)',
+    config: { tension: 300, friction: 10 },
+  }));
+
   return (
     <div className="about-container" style={{ width: '100%' }}>
+      <div className='about-content'>
+        <br></br><br></br>
       <h2>About Us</h2>
+      </div>
+      <br/>
       <p>
-        "Lomaa IT Solutions is a product-based result-oriented custom software development company. Every time we upgrade things with the latest technologies to serve our clients a new kind of software technologies to resolve and function the business in a digital way"
+        "Lomaa IT Solutions is a product-based result-oriented
+         custom software development company.<br/> Every time we upgrade
+          things with the latest technologies to serve our clients
+           a new kind of software<br/> technologies to resolve and function the business in a digital way"
       </p>
 
       <div className="icon-container" style={{ width: '100%' }}>
@@ -76,14 +100,28 @@ const About = () => {
           dedicated, and perceptiveness, continuously drive for our own firm.
         </p>
         <div>
+        <animated.div
+          style={icon4Props}
+          className="icon-item"
+          onMouseEnter={() => setIcon4Props({ transform: 'scale(1.2)' })}
+          onMouseLeave={() => setIcon4Props({ transform: 'scale(1)' })}
+        >
           <AccountCircleIcon fontSize="large" />
+          </animated.div>
           <h1>Director</h1>
         </div>
       </div>
 
       <div className="centered-container" style={{ width: '100%' }}>
         <div>
+        <animated.div
+          style={icon5Props}
+          className="icon-item"
+          onMouseEnter={() => setIcon5Props({ transform: 'scale(1.2)' })}
+          onMouseLeave={() => setIcon5Props({ transform: 'scale(1)' })}
+        >
           <AccountCircleIcon fontSize="large" />
+          </animated.div>
           <h1>Managing Director</h1>
         </div>
         <p>
@@ -101,14 +139,28 @@ const About = () => {
           then why can’t we  <br />innovate for our future. 
         </p>
         <div>
+        <animated.div
+          style={icon6Props}
+          className="icon-item"
+          onMouseEnter={() => setIcon6Props({ transform: 'scale(1.2)' })}
+          onMouseLeave={() => setIcon6Props({ transform: 'scale(1)' })}
+        >
           <AccountCircleIcon fontSize="large" />
+          </animated.div>
           <h1>Director</h1>
         </div>
       </div>
 
       <div className="centered-container" style={{ width: '100%' }}>
         <div>
+        <animated.div
+          style={icon7Props}
+          className="icon-item"
+          onMouseEnter={() => setIcon7Props({ transform: 'scale(1.2)' })}
+          onMouseLeave={() => setIcon7Props({ transform: 'scale(1)' })}
+        >
           <AccountCircleIcon fontSize="large" />
+          </animated.div>
           <h1>Project Manager</h1>
         </div>
         <p>
