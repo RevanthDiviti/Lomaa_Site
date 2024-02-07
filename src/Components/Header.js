@@ -79,9 +79,9 @@ function DrawerAppBar(props) {
             MUI
           </Typography> */}
           <img src={logo} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px', marginBottom: '16px' }} />
-          <Box sx={{ display: { xs: 'none', sm: 'block' }, marginLeft:'auto'}}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' }, marginLeft:'auto',marginRight:'55px'}}>
             {navItems.map((item) => (
-              <Button key={item.label} component={Link} to={item.path} sx={{ color: '#000' }}>
+              <Button key={item.label} component={Link} to={item.path} sx={{ color: '#000',margin:'15px' }}>
                 {item.label}
               </Button>
             ))}
