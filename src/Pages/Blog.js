@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Blog() {
   const containerStyle = {
+    display: 'flex',
     flexDirection: 'row', // Display cards in a row
     justifyContent: 'center', // Center horizontally
     alignItems: 'center', // Center vertically
@@ -15,7 +16,7 @@ function Blog() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center', // Center horizontally
-    minHeight: '100vh', // Ensure the content takes at least the full height of the viewport
+    minHeight: '100vh',
   };
 
   const mediaQueryStyle = {
