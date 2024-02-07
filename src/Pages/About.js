@@ -5,10 +5,7 @@ import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 const About = () => {
   // Define the animation properties for each icon using react-spring
@@ -118,15 +115,8 @@ const About = () => {
         </p>
       </div>
 
-      {/* Footer */}
-      <footer className="footer-container">
-        <div className="social-icons">
-          <FacebookIcon fontSize="large" />
-          <InstagramIcon fontSize="large" />
-          <TwitterIcon fontSize="large" />
-          <LinkedInIcon fontSize="large" />
-        </div>
-      </footer>
+      
+    
     </div>
   );
 };
