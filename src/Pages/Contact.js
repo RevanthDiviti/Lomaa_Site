@@ -10,10 +10,6 @@ import {
   TextField,
   Button,
   FormControl,
-  FormLabel,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
 } from '@mui/material';
 import client1 from '../Assets/phone-outline-icon.png';
 import client2 from '../Assets/feedback-icon.png';
@@ -30,121 +26,118 @@ const theme = createTheme({
   },
 });
 
-const StyledButton = styled(Button)(
-  ({
-    border: '5px solid #62a716',
-    padding: '20px 30px',
-    fontSize: 'medium',
-    borderRadius: '50px',
-    fontWeight: 'bold',
-    margin: '0 50% 0 0',
-    cursor: 'pointer',
-    backgroundColor: '#62a716',
-    transition: 'background-color 0.3s ease-in-out',
-    '&:hover': {
-      backgroundColor: '#f0f0f0',
-    },
-  })
-);
-
+const StyledButton = styled(Button)(({ theme }) => ({
+  border: '5px solid #62a716',
+  padding: '20px 30px',
+  fontSize: 'medium',
+  borderRadius: '50px',
+  fontWeight: 'bold',
+  margin: '0 auto',
+  cursor: 'pointer',
+  backgroundColor: '#62a716',
+  transition: 'background-color 0.3s ease-in-out',
+  '&:hover': {
+    backgroundColor: '#f0f0f0',
+  },
+}));
 
 const ContactForm = () => {
-const [name, setName] = useState('');
-const [phoneNumber, setPhoneNumber] = useState('');
-const [email, setEmail] = useState('');
-const [topic, setTopic] = useState('');
-const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [topic, setTopic] = useState('');
+  const [message, setMessage] = useState('');
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', { name, phoneNumber, email, topic, message });
+  };
 
-  console.log('Form submitted:', { name, phoneNumber, email, topic, message });
-};
-
-return (
-  <form onSubmit={handleSubmit} className="contact-form">
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <FormControl fullWidth margin="normal" required>
-          <TextField
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            fullWidth
-            variant="outlined"
-            placeholder='YOUR NAME'
-            inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
-          />
-        </FormControl>
+  return (
+    <form onSubmit={handleSubmit} className="contact-form">
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth margin="normal" required>
+            <TextField
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              variant="outlined"
+              placeholder="YOUR NAME"
+              inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth margin="normal" required>
+            <TextField
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              variant="outlined"
+              placeholder="EMAIL ADDRESS"
+              inputProps={{ style: { textAlign: 'center', fontWeight: '600', fontSize: '16px' } }}
+            />
+          </FormControl>
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
-        <FormControl fullWidth margin="normal" required>
-          <TextField
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            fullWidth
-            variant="outlined"
-            placeholder='EMAIL ADDRESS'
-            inputProps={{ style: { textAlign: 'center', fontWeight: '600', fontSize: '16px' } }}
-          />
-        </FormControl>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth margin="normal">
+            <TextField
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              fullWidth
+              variant="outlined"
+              placeholder="PHONE NUMBER"
+              inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
+            />
+          </FormControl>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <FormControl fullWidth margin="normal" required>
+            <TextField
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              fullWidth
+              variant="outlined"
+              placeholder="YOUR TOPIC"
+              inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
+            />
+          </FormControl>
+        </Grid>
       </Grid>
-    </Grid>
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <FormControl fullWidth margin="normal">
-          <TextField
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            fullWidth
-            variant="outlined"
-            placeholder='PHONE NUMBER'
-            inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
-          />
-        </FormControl>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <FormControl fullWidth margin="normal" required>
-          <TextField
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
-            fullWidth
-            variant="outlined"
-            placeholder='YOUR TOPIC'
-            inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
-          />
-        </FormControl>
-      </Grid>
-    </Grid>
-    <FormControl fullWidth margin="normal" required>
-      <TextField
-        multiline
-        rows={4}
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        fullWidth
-        variant="outlined"
-        placeholder='YOUR MESSAGE'
-        inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
-      />
-    </FormControl>
-    <StyledButton type="submit" variant="contained" color="primary" fullWidth>
+      <FormControl fullWidth margin="normal" required>
+        <TextField
+          multiline
+          rows={4}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          fullWidth
+          variant="outlined"
+          placeholder="YOUR MESSAGE"
+          inputProps={{ style: { textAlign: 'center', fontWeight: 'bold' } }}
+        />
+      </FormControl>
+      <StyledButton type="submit" variant="contained" color="primary" fullWidth>
         Send Message
       </StyledButton>
-  </form>
-);
+    </form>
+  );
 };
 
-const HoverImage = styled('img')({
+const HoverImage = styled('img')(({ theme }) => ({
   maxWidth: '100%',
   height: '50%',
   width: '35%',
-  marginLeft: '40%',
+  marginLeft: '50%',
+  transform: 'translateX(-50%)', // Center horizontally
   transition: 'transform 0.3s ease-in-out',
   backgroundColor: '#a0ce4e',
   borderRadius: '35%',
   padding: '5%',
   marginTop: '7%',
-});
+}));
 
 const AdditionalBox = styled('div')(({ theme }) => ({
   maxWidth: '100%',
@@ -213,7 +206,7 @@ const ContactNum = styled(Typography)({
   color: '#a4ae2b',
 });
 
-const StartChatButton = styled('button')({
+const StartChatButton = styled('button')(({ theme }) => ({
   border: '5px solid #a0ce4e',
   padding: '20px 30px',
   fontSize: 'medium',
@@ -223,15 +216,15 @@ const StartChatButton = styled('button')({
   cursor: 'pointer',
   backgroundColor: '#fff',
   cursor: 'pointer',
-  transition: 'backround-color 0.3s ease-in-out',
+  transition: 'background-color 0.3s ease-in-out',
   '&:hover': {
     backgroundColor: '#f0f0f0',
   },
-});
+}));
 
-const ContactHeading = styled(Typography)({
-  width: '200px', 
-  height: '50rem', 
+const ContactHeading = styled(Typography)(({ theme }) => ({
+  width: '200px',
+  height: '50rem',
   backgroundColor: '#a0ce4e',
   clipPath: 'polygon(-80% 0%, 180% 0%, 50% 100%)',
   width: 'calc(100% + 100px)',
@@ -241,13 +234,12 @@ const ContactHeading = styled(Typography)({
   marginTop: '-10px',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center', 
-});
+  alignItems: 'center',
+}));
 
-
-const ContactFormContainer = styled('div')({
+const ContactFormContainer = styled('div')(({ theme }) => ({
   marginTop: '50px',
-});
+}));
 
 const Contact = () => {
   const clients = [client1, client2, client3, client4, client5, client6];
@@ -262,14 +254,18 @@ const Contact = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-      <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
+        <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
           Contact
         </ContactHeading>
         <Grid container spacing={3}>
           {clients.map((client, index) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
               <HoverImage src={client} alt={`Client ${index + 1}`} />
-              <ClientName variant="body2" dangerouslySetInnerHTML={{ __html: clientNames[index] }} sx={{ fontWeight: '600', fontSize: '20px' }} />
+              <ClientName
+                variant="body2"
+                dangerouslySetInnerHTML={{ __html: clientNames[index] }}
+                sx={{ fontWeight: '600', fontSize: '20px' }}
+              />
             </Grid>
           ))}
         </Grid>
@@ -287,7 +283,6 @@ const Contact = () => {
           <StartChatButton>START CHAT NOW!</StartChatButton>
         </AdditionalBox>
         <ContactFormContainer>
-          
           <ContactForm />
         </ContactFormContainer>
       </Container>
