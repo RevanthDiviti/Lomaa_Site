@@ -35,7 +35,6 @@ const StyledButton = styled(Button)(
   ({
     border: '5px solid #62a716',
     padding: '20px 30px',
-    width:'20%',
     fontSize: 'medium',
     borderRadius: '50px',
     fontWeight: 'bold',
@@ -274,7 +273,7 @@ const Contact = () => {
           <StartChatButton>START CHAT NOW!</StartChatButton>
         </AdditionalBox>
         <ContactFormContainer>
-          {/* Render the ContactForm component */}
+          
           <ContactForm />
         </ContactFormContainer>
       </Container>
