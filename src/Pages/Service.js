@@ -5,7 +5,7 @@ const Service = () => {
     <div>
       <div className='about-content'>
         <br></br><br></br>
-      
+      {/**/} 
       </div>
     </div>
   )
