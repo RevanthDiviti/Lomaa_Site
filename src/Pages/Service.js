@@ -6,11 +6,21 @@ import three from '../Assets/service/card3.jpg';
 import four from '../Assets/service/card4.jpg';
 import five from '../Assets/service/card5.jpg';
 import six from '../Assets/service/card6.jpg';
+import Clip from '../Components/Clip';
+
+
 
 const Service = () => {
   return (
     <>
+      <div className='clip-div'>
+    <Clip/>
+    
+    </div>
+  
+    <br/><br/>
     <div className="service-container">
+   
       <div className="service-row">
         <div className="service-card">
         <img src={one} alt="Additional Image" style={{height:"25rem",width:"30rem"}}/>
@@ -53,10 +63,9 @@ const Service = () => {
           <p1 style={{textAlign:"center"}}>Nowadays re-appropriating is utilized by practically all divisions, global organizations, all ventures. BPO alludes to the redistributing of fringe exercises of the association. </p1>
         </div>
     <div>
-      <div className='about-content'>
-        <br></br><br></br>
-
-      </div>
+    
+    </div>
+    </div>
     </div>
     </>
   );

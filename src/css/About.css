@@ -51,7 +51,8 @@
 .footer-container {
 
   width: calc(100% + 29px); /* Adjusted width to accommodate the 30px gap on each side */
-
+  clip-path: polygon(170% 0%, -70% 0%, 50% 100%);
+  
   width: calc(100% + 24px); /* Adjusted width to accommodate the 30px gap on each side */
   margin: 0 30px; /* Added margin to create the gap */
   height: 50rem; /* Adjust height as needed */
@@ -87,11 +88,11 @@
   }
 }
 .about-content {
-  width: 200px; /* Adjust width as needed */
-  height: 50rem; /* Adjust height as needed */
-  background-color: #23460c; 
-  clip-path: polygon(-80% 0%, 180% 0%, 50% 100%);
-  width: calc(100% + 100px);
+  width: 200px;
+  height: 50rem; 
+  background-image: radial-gradient(circle at 50px 50px, rgba(2, 0, 0, 0) 0%, rgba(0, 2, 5, 0) 5px, rgba(0, 0, 0, 1) 5px, rgba(0, 0, 0, 1) 10px, rgba(243, 243, 245, 1) 10px);
+  clip-path: polygon(-70% 0%, 170% 0%, 50% 100%);
+  width: calc(100% + 80px);
   margin-left: -5rem;
   color: white;
   height: 10rem;
