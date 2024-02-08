@@ -9,9 +9,9 @@ const Footer = () => {
     <div>
         <footer className="footer-container">
         <div className="social-icons">
-          <FacebookIcon fontSize="large" />
+          <FacebookIcon fontSize="large"/>
           <InstagramIcon fontSize="large" />
-          <TwitterIcon fontSize="large" />
+          <TwitterIcon fontSize="large"/>
           <LinkedInIcon fontSize="large" />{/**/} 
         </div>
       </footer>

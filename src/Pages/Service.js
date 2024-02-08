@@ -14,10 +14,7 @@ const Service = () => {
   return (
 <>
     <div>
-      <div className='about-content'>
-        <br></br><br></br>
-      {/**/} 
-      </div>
+    
 
     <div>
       <div className='clip-div'>
