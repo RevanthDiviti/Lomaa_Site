@@ -5,6 +5,7 @@ import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Clip from '../Components/Clip';
 
 
 const About = () => {
@@ -43,10 +44,7 @@ const About = () => {
 
   return (
     <div className="about-container" style={{ width: '100%' }}>
-      <div className='about-content'>
-        <br></br><br></br>
-      <h2>About Us</h2>
-      </div>
+      <Clip/>
       <br/>
       <p>
         "Lomaa IT Solutions is a product-based result-oriented

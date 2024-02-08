@@ -40,8 +40,12 @@ function Blog() {
   };
 
   return (
+    
     <div style={{ ...pageStyle, ...mediaQueryStyle }}>
-      <h1>Blog</h1>
+      <div className='about-content'>
+        <br></br><br></br>
+      
+      </div>
       <div style={containerStyle}>
         <div style={{ margin: '10px' }}>
           <Link to='/blog/digitalmarketing' style={linkStyle}><CardWithImage1 /></Link>

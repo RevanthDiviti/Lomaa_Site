@@ -9,6 +9,7 @@ import six from '../Assets/service/card6.jpg';
 
 const Service = () => {
   return (
+    <>
     <div className="service-container">
       <div className="service-row">
         <div className="service-card">
@@ -51,8 +52,13 @@ const Service = () => {
           <h2 style={{color:"black",textAlign:"center"}}>BPO and KPO <br/> Services</h2>
           <p1 style={{textAlign:"center"}}>Nowadays re-appropriating is utilized by practically all divisions, global organizations, all ventures. BPO alludes to the redistributing of fringe exercises of the association. </p1>
         </div>
+    <div>
+      <div className='about-content'>
+        <br></br><br></br>
+
       </div>
     </div>
+    </>
   );
 };
 
