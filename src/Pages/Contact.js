@@ -253,11 +253,15 @@ const Contact = () => {
   ];
   return (
     <>   
+    <div className='about-content'>
+        <br></br><br></br>
+      
+      </div>
     <ThemeProvider theme={theme}>
       <Container>
-        <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
+        {/* <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
           Contact
-        </ContactHeading>
+        </ContactHeading> */}
         <Grid container spacing={3}>
           {clients.map((client, index) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
