@@ -131,7 +131,7 @@ const HoverImage = styled('img')(({ theme }) => ({
   height: '50%',
   width: '35%',
   marginLeft: '50%',
-  transform: 'translateX(-50%)', // Center horizontally
+  transform: 'translateX(-50%)', 
   transition: 'transform 0.3s ease-in-out',
   backgroundColor: '#a0ce4e',
   borderRadius: '35%',
@@ -157,7 +157,7 @@ const AdditionalBox = styled('div')(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     paddingTop: '20%',
-    background: `url(${TeleCaller2}) center/cover no-repeat`, // Change to the new image URL
+    background: `url(${TeleCaller2}) center/cover no-repeat`, 
   },
 }));
 
@@ -257,8 +257,7 @@ const Contact = () => {
         <br></br><br></br>
       
       </div>
-    <Container>
-      
+    <Container>      
       <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000', fontFamily: 'Poppins' }}>
         Contact
       </Typography>
@@ -276,7 +275,7 @@ const Contact = () => {
           </Grid>
         ))}
       </Grid>
-      {/* Add the image below the Grid */}
+      
       <img src={TeleCaller} alt="Additional Image" style={{ maxWidth: '100%', marginTop: '100px' }} />
     </Container>
     
