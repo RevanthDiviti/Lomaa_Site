@@ -12,7 +12,11 @@ import Clip from '../Components/Clip';
 
 const Service = () => {
   return (
-    <>
+<>
+    <div>
+    
+
+    <div>
       <div className='clip-div'>
     <Clip/>
     
@@ -64,6 +68,8 @@ const Service = () => {
         </div>
     <div>
     
+    </div>
+    </div>
     </div>
     </div>
     </div>
