@@ -50,29 +50,32 @@
 
 .footer-container {
 
-  width: calc(100% + 29px); /* Adjusted width to accommodate the 30px gap on each side */
-  clip-path: polygon(170% 0%, -70% 0%, 50% 100%);
-  
-  width: calc(100% + 24px); /* Adjusted width to accommodate the 30px gap on each side */
-  margin: 0 30px; /* Added margin to create the gap */
-  height: 50rem; /* Adjust height as needed */
-  background-color: #0c1446;
-  background-color: #f0f0f0;
+  width: calc(100% + 29px); 
+  clip-path: polygon(51% 24%, 100% 0, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 21% 100%, 0 100%, 0% 35%, 0 0);
+  width: calc(100% + 24px);
+  margin: 0 30px; 
+  height: 60rem;
+  background-color:rgba(31,39,50,255);
   padding: 20px;
   text-align: center;
   margin-top: 1.5rem;
   margin-left: -1.5rem;
-  height: 100px;
+  height: 23rem;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 
 .social-icons > * {
-  margin: 0 10px;
+  margin: 0 20px;
+  color:white;
+  margin-top: 12rem;
+  margin-left: 4rem;
 }
 
 @media (max-width: 768px) {
