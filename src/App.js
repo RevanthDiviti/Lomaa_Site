@@ -9,6 +9,7 @@ import Client from './Pages/Client';
 import Contact from './Pages/Contact';
 import Img1con from './blog/Img1cont';
 import Img2con from './blog/Img2con';
+import Footer from './Components/Footer';
 ;
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
 
     </Routes>
+    <Footer/>
     </>
   );
 }

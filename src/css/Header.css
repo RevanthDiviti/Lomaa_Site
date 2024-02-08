@@ -1,0 +1,10 @@
+.nav-item {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    
+    background-color: #aeef85;
+    color: #62a716;
+  }
+  

@@ -20,7 +20,7 @@ const HoverImage = styled('img')({
   borderRadius: '10px', // Apply border radius
   '&:hover': {
     transform: 'scale(1.05)',
-    boxShadow: '0 0 20px #00ff00',
+    boxShadow: '0 0 20px #00ff09',
   },
 });
 
@@ -41,10 +41,15 @@ const ClientsPage = () => {
   ];
 
   return (
+    <>
+    <div className='about-content'>
+        <br></br><br></br>
+      
+      </div>
     <Container>
-      <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4,fontWeight:'900',fontFamily:'fantasy' }}>
+      <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4,fontWeight:'900',fontFamily:'inherit' }}>
         Our Clients
-w      </Typography>
+    </Typography>
       <Grid container spacing={3}>
         {clients.map((client, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
@@ -54,6 +59,7 @@ w      </Typography>
         ))}
       </Grid>
     </Container>
+    </>
   );
 };
 

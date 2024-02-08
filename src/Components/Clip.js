@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-const Service = () => {
+const Clip = () => {
   return (
     <div>
       <div className='about-content'>
@@ -9,6 +10,6 @@ const Service = () => {
       </div>
     </div>
   )
-}
+};
 
-export default Service
+export default Clip;

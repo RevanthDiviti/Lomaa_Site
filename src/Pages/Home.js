@@ -49,34 +49,10 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <>
-      <div className={classes.sliderContainer}>
-        <div className={classes.overlay}></div>
-        <div className={classes.sliderContent}>
-          <Typography variant='h4' className='classes.sliderMain'><b>WELCOME TO</b></Typography>
-          <Typography variant="h2" className={classes.sliderTitle}>
-            LOMAA IT
-          </Typography>
-          <Typography variant="h4" className={classes.sliderSubtitle}>
-            One Stop for All IT Services
-          </Typography>
-          <Button variant="contained" color="primary" className={classes.sliderButton}>
-            Get Started
-          </Button>
-        </div>
-        <div className='verticalimage'>
-          <img
-            src={vl}
-            alt="vertical_line"
-            style={{ width: '100%', maxHeight: '15rem', marginTop: '5rem' }}
-          />
-          <h1>We are one of the best IT companies<br />standing in Vijayawada, AP.</h1>
-        </div>
-      </div>
-      <ServiceSection />
-      <StepsSection/>
-    </>
-  );
+    <div>
+      Home<h1>MANOJ</h1>
+    </div>
+  )
 }
 
 export default Home;
