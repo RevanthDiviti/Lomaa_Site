@@ -252,38 +252,16 @@ const Contact = () => {
     'Australia<br />PO BOX 537, Cherrybrook LPO, Cherrybrook, New South Wales-2126',
   ];
   return (
-    <>
+    <>   
     <div className='about-content'>
         <br></br><br></br>
       
       </div>
-    <Container>      
-      <Typography variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000', fontFamily: 'Poppins' }}>
-        Contact
-      </Typography>
-      <Grid container spacing={3}>
-        {clients.map((client, index) => (
-          <Grid item xs={12} sm={6} md={4} lg={4} key={index}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ border: '5px solid #a0ce4e', borderRadius: '50%', padding: '5%' }}>
-                <div style={{ border: '5px solid #a0ce4e', borderRadius: '50%', padding: '20px', backgroundColor: '#a0ce4e' }}>
-                  <HoverImage src={client} alt={`Client ${index + 1}`} />
-                </div>
-              </div>
-            </div>
-            <ClientName variant="body2" dangerouslySetInnerHTML={{ __html: clientNames[index] }} sx={{ fontWeight: '600', fontFamily: 'Poppins', fontSize: '20px' }} />
-          </Grid>
-        ))}
-      </Grid>
-      
-      <img src={TeleCaller} alt="Additional Image" style={{ maxWidth: '100%', marginTop: '100px' }} />
-    </Container>
-    
     <ThemeProvider theme={theme}>
       <Container>
-        <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
+        {/* <ContactHeading variant="h4" align="center" gutterBottom sx={{ mt: 4, fontWeight: '1000' }}>
           Contact
-        </ContactHeading>
+        </ContactHeading> */}
         <Grid container spacing={3}>
           {clients.map((client, index) => (
             <Grid item xs={12} sm={6} md={4} lg={4} key={index}>

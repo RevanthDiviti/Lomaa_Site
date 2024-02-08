@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const Clip = () => {
@@ -9,6 +10,6 @@ const Clip = () => {
       </div>
     </div>
   )
-}
+};
 
-export default Clip
+export default Clip;
