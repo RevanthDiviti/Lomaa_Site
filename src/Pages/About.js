@@ -43,8 +43,12 @@ const About = () => {
   }));
 
   return (
+    <>
+    <div>
+      <Clip />
+    </div>
     <div className="about-container" style={{ width: '100%' }}>
-      <Clip/>
+      
       <br/>
       <p>
         "Lomaa IT Solutions is a product-based result-oriented
@@ -168,6 +172,7 @@ const About = () => {
       
     
     </div>
+    </>
   );
 };
 
